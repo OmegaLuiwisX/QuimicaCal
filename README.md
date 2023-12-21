@@ -1,1 +1,1 @@
-# QuimicaCal
+# CalculadoraQuimica

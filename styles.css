@@ -1,0 +1,12 @@
+/* Estilos adicionales para el Descuento Total */
+#valorVenta,
+#valorVentaFinal {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+#resultadoDescuentoTotal {
+    font-weight: bold;
+    color: #4caf50; /* color verde */
+}

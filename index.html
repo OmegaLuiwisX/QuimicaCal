@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Multifunción</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Calculadora Multifunción</h1>
+
+    <!-- Sección para Margen Real -->
+    <h2>Margen Real</h2>
+    <p>Fórmula: Margen Real = 1 - ((1 - Margen Teórico) / (1 - Descuento Q))</p>
+    <p>Ingresa el Margen Teórico y el Descuento Q en formato de porcentaje (p. ej., 10 para un 10%):</p>
+    <label for="margenTeorico">Margen Teórico:</label>
+    <input type="number" id="margenTeorico">
+
+    <label for="descuentoQ">Descuento Q:</label>
+    <input type="number" id="descuentoQ">
+
+    <button onclick="calcularMargenReal()">Calcular Margen Real</button>
+
+    <p>El Margen Real es: <span id="resultadoMargenReal"></span></p>
+
+    <!-- Sección para Descuento Q Objetivo -->
+    <h2>Descuento Q Objetivo</h2>
+    <p>Fórmula: Descuento Q Objetivo = 1 - ((1 - Margen Teórico) / (1 - Margen Real))</p>
+    <p>Ingresa los valores de Margen Teórico y Margen Real en formato de porcentaje:</p>
+    <label for="margenTeoricoObjetivo">Margen Teórico:</label>
+    <input type="number" id="margenTeoricoObjetivo">
+
+    <label for="margenRealObjetivo">Margen Real:</label>
+    <input type="number" id="margenRealObjetivo">
+
+    <button onclick="calcularDescuentoObjetivo()">Calcular Descuento Q Objetivo</button>
+
+    <p>El Descuento Q Objetivo es: <span id="resultadoDescuentoObjetivo"></span></p>
+
+    <!-- Sección para Venta Objetivo -->
+    <!-- Esta sección ha sido eliminada -->
+
+    <!-- Sección para Descuento Total -->
+    <h2>Descuento Total</h2>
+    <p>Fórmula: Descuento Total = 1 - (Valor Venta / Valor Venta Final)</p>
+    <p>Ingresa los valores de Valor Venta y Valor Venta Final para calcular el Descuento Total:</p>
+    <label for="valorVenta">Valor Venta:</label>
+    <input type="number" id="valorVenta">
+
+    <label for="valorVentaFinal">Valor Venta Final:</label>
+    <input type="number" id="valorVentaFinal">
+
+    <button onclick="calcularDescuentoTotal()">Calcular Descuento Total</button>
+
+    <p>El Descuento Total es: <span id="resultadoDescuentoTotal"></span></p>
+
+    <!-- Sección para Descuento R -->
+    <h2>Descuento R</h2>
+    <p>Fórmula: Descuento R = 1 - ((1 - Descuento Total) / (1 - Descuento Q))</p>
+    <p>Ingresa los valores de Descuento Total y Descuento Q en formato de porcentaje:</p>
+    <label for="descuentoTotalDR">Descuento Total:</label>
+    <input type="number" id="descuentoTotalDR">
+
+    <label for="descuentoQDR">Descuento Q:</label>
+    <input type="number" id="descuentoQDR">
+
+    <button onclick="calcularDescuentoR()">Calcular Descuento R</button>
+
+    <p>El Descuento R es: <span id="resultadoDescuentoR"></span></p>
+
+    <!-- Sección para Descuento Total QR -->
+    <h2>Descuento Total QR</h2>
+    <p>Fórmula: Descuento Total QR = 1 - ((1 - Descuento R) * (1 - Descuento Q))</p>
+    <p>Ingresa los valores de Descuento R y Descuento Q en formato de porcentaje:</p>
+    <label for="descuentoR">Descuento R:</label>
+    <input type="number" id="descuentoR">
+
+    <label for="descuentoQDTQR">Descuento Q:</label>
+    <input type="number" id="descuentoQDTQR">
+
+    <button onclick="calcularDescuentoTotalQR()">Calcular Descuento Total QR</button>
+
+    <p>El Descuento Total QR es: <span id="resultadoDescuentoTotalQR"></span></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
